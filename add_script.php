@@ -1,8 +1,15 @@
 <?php
+  // $servername = "sql108.epizy.com";
+  // $username = "epiz_31203125";
+  // $password = "8U9NKPeF98aB2V";
+  // $dbname = "epiz_31203125_help_db";
+
+
   $servername = "localhost";
   $username = "root";
   $password = "";
   $dbname = "help_db";
+
 
 
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,9 +18,13 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $status = $_REQUEST['status'] == '1' ? 1 : 0;
+  $status = 0;
+  $current_date = date('Y-m-d H:i:s');
 
-  $sql = "INSERT INTO `help_ukr` (`id`, `date`, `name`, `need`, `contacts`, `status`, `comments`) VALUES (NULL, '{$_REQUEST['date']}', '{$_REQUEST['name']}', '{$_REQUEST['need']}', '{$_REQUEST['contacts']}', {$status}, '{$_REQUEST['comments']}' );";
+  $sql = "INSERT INTO `help_ukr` (`id`, `date`, `name`, `need`, `contacts`, `status`, `comments`)
+    VALUES
+    (NULL, '$current_date', '{$_REQUEST['name']}', '{$_REQUEST['need']}',
+    '{$_REQUEST['contacts']}', {$status}, '{$_REQUEST['comments']}' );";
 
 
   if ($conn->query($sql) === TRUE) {
@@ -26,5 +37,4 @@
 
   header("Location: index.php");
   die();
-
 ?>

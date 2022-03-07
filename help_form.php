@@ -1,7 +1,5 @@
 <!DOCTYPE HTML>
-
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta lang="pl">
@@ -13,9 +11,7 @@
 
 <body>
 
-<header>
-  
-</header>
+<?php include 'header.php';?>
 
 
 <main>
@@ -24,11 +20,6 @@
 
     <div class="mb-3">
       <h1 class="h3 mb-3 fw-normal">Add new</h1>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label" for="date">Date</label>
-      <input type="date" class="form-control" name="date" id="date" required>
     </div>
 
 
@@ -48,12 +39,6 @@
       <input type="text" class="form-control" name="contacts" id="contacts" required>
     </div>
 
-
-    <div class="mb-3">
-      <label class="form-label" for="status">status</label>
-      <input type="checkbox"  name="status" id="status" value="1">
-    </div>
-
     <div class="mb-3">
       <label class="form-label" for="comments">comments</label>
       <textarea class="form-control" aria-label="With textarea" name="comments" id="comments"></textarea>
@@ -68,9 +53,7 @@
 </main>
 
 
-<footer>
-  
-</footer>
+<?php include 'footer.php';?>
 
 </body>
 </html>
