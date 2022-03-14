@@ -37,7 +37,13 @@
 
 }
 
-/*.blog-footer p:last-child {
-  margin-bottom: 0;
+
+.t-d-n
+{
+	text-decoration:  none;
 }
-*/
+
+.t-a-c
+{
+	text-align: center;
+}

@@ -15,15 +15,7 @@
 <main>
 
 <?php
-  // $servername = "sql108.epizy.com";
-  // $username = "epiz_31203125";
-  // $password = "8U9NKPeF98aB2V";
-  // $dbname = "epiz_31203125_help_db";
-
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "help_db";
+  include 'connection_data.php';
 
   $conn = new mysqli($servername, $username, $password, $dbname);
   
